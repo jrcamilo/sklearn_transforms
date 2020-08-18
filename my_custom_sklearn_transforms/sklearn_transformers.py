@@ -9,7 +9,10 @@ class DropColumns(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
 
-    def preDrop(df_data_1):
+    def transform(self, X):
+
+        df_data_1 = X.copy()
+
         coluna  = df_data_1['NOTA_DE']
         coluna1 = df_data_1['NOTA_EM']
         coluna2 = df_data_1['NOTA_MF']
@@ -74,12 +77,8 @@ class DropColumns(BaseEstimator, TransformerMixin):
         df_data_1 = coluna2
         df_data_1 = coluna3
         df_data_1 = coluna4
-
-        return df_data_1
-
-    def transform(self, X):
         
         # Primeiro realizamos a cópia do dataframe 'X' de entrada mas antes consertamos possiveis ruidos
-        data = preDrop(X.copy())
+        data = df_data_1
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
