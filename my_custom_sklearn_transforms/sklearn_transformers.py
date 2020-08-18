@@ -6,8 +6,10 @@ class DropColumns(BaseEstimator, TransformerMixin):
     def __init__(self, columns):
         self.columns = columns
 
-    def fit(self, X, y=None):
+    def fit(self, X, y=varPerfil):
         return self
+
+varPerfil 
 
     def transform(self, X):
 
@@ -17,7 +19,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
         coluna1 = df_data_1['NOTA_EM']
         coluna2 = df_data_1['NOTA_MF']
         coluna3 = df_data_1['NOTA_GO']
-        coluna4 = df_data_1['PERFIL']
+        coluna4 = df_data_1['NOTA_DE']
 
         for i in range(df_data_1['NOTA_DE'].shape[0]) :
             if((math.isnan(coluna[i]))):
@@ -76,7 +78,8 @@ class DropColumns(BaseEstimator, TransformerMixin):
         df_data_1 = coluna1
         df_data_1 = coluna2
         df_data_1 = coluna3
-        df_data_1 = coluna4
+        coluna4[0] = batata
+        varPerfil = coluca4
         
         # Primeiro realizamos a cópia do dataframe 'X' de entrada mas antes consertamos possiveis ruidos
         data = df_data_1
