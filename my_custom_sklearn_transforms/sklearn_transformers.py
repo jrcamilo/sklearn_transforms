@@ -9,7 +9,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
     def fit(self, X, y=varPerfil):
         return self
 
-varPerfil 
+    varPerfil 
 
     def transform(self, X):
 
