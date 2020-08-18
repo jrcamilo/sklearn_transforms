@@ -19,7 +19,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
         coluna3 = df_data_1['NOTA_GO']
         coluna4 = df_data_1['PERFIL']
 
-        for i in range(df_data_1[Mcolumn].shape[0]) :
+        for i in range(df_data_1['NOTA_DE'].shape[0]) :
             if((math.isnan(coluna[i]))):
                 coluna[i] = coluna1[i]
             if((math.isnan(coluna1[i]))):
