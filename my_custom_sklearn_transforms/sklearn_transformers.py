@@ -68,14 +68,14 @@ class DropColumns(BaseEstimator, TransformerMixin):
     
         coluna4[i]=res
 
-#   atualiza o data set
-    fdf_data_1 = coluna
-    dfdf_data_1 = coluna1
-    dfdf_data_1 = coluna2
-    dfdf_data_1 = coluna3
-    dfdf_data_1 = coluna4
+#       atualiza o data set
+        df_data_1 = coluna
+        df_data_1 = coluna1
+        df_data_1 = coluna2
+        df_data_1 = coluna3
+        df_data_1 = coluna4
 
-    return dfdf_data_1
+        return df_data_1
 
     def transform(self, X):
         
